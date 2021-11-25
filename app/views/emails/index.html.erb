@@ -7,7 +7,7 @@
       <ul class="list-unstyled text-small" id="email-new">
         <% @emails.each do |email|  %>
             <a href='<%= email_path(email) %>' data-remote= 'true' >
-            <li class='remove-<%= email.id %>' style="color: black;">
+            <li class='remove-<%= email.id %>'<% if email.read == true %> style="color: black;"<% end %>>
                   <%= email.object %>
               </li>
             </a>
